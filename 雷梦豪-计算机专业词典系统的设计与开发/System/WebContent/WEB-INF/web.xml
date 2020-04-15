@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>onlineChat2.0</display-name>
+  <servlet>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.servlet.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/vocabulary</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UserFeedbackServlet</servlet-name>
+    <servlet-class>com.servlet.UserFeedbackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserFeedbackServlet</servlet-name>
+    <url-pattern>/feedback</url-pattern>
+  </servlet-mapping>
+  <filter>
+	<filter-name>LoginFilter</filter-name>
+	<filter-class>com.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+	<filter-name>LoginFilter</filter-name>
+	<url-pattern>/userAdd.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+	<filter-name>LoginFilter</filter-name>
+	<url-pattern>/userFeedback.jsp</url-pattern>
+  </filter-mapping>
+</web-app>
