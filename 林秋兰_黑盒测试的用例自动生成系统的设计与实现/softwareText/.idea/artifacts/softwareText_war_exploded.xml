@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="softwareText:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/softwareText_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="softwareText" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+          <element id="library" level="project" name="commons-logging-1.1.3" />
+          <element id="library" level="project" name="javassist-3.11.0.GA" />
+          <element id="library" level="project" name="ognl-3.0.21" />
+          <element id="library" level="project" name="hibernate-envers-5.3.14.Final" />
+          <element id="library" level="project" name="hibernate-jpamodelgen-5.3.14.Final" />
+          <element id="library" level="project" name="agroal" />
+          <element id="library" level="project" name="osgi" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.47" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="softwareText/web/Web" />
+    </root>
+  </artifact>
+</component>
