@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="agroal">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/agroal/agroal-api-0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/agroal/agroal-pool-0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/agroal/hibernate-agroal-5.3.14.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/c3p0/c3p0-0.9.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/c3p0/hibernate-c3p0-5.3.14.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/c3p0/mchange-commons-java-0.2.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/ehcache/ehcache-2.10.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/ehcache/hibernate-ehcache-5.3.14.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/ehcache/slf4j-api-1.7.7.jar!/" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/agroal" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/c3p0" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/ehcache" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/hikaricp" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/jcache" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/proxool" />
+      <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/vibur" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/agroal" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/c3p0" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/ehcache" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/hikaricp" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/jcache" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/proxool" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib/optional/vibur" recursive="false" />
+  </library>
+</component>
