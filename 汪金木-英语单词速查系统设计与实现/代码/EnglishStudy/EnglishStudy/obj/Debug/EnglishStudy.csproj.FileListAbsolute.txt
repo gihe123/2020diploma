@@ -1,0 +1,67 @@
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\bin\Debug\EnglishStudy.exe
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\bin\Debug\EnglishStudy.pdb
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Form1.resources
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Properties.Resources.resources
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.csproj.GenerateResource.Cache
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.exe
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.pdb
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.MainWindow.resources
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.UserDetail.resources
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.WordDetail.resources
+C:\Users\gateway\Documents\Visual Studio 2008\Projects\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.AddWord.resources
+C:\Documents and Settings\aiyuchen\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.exe
+C:\Documents and Settings\aiyuchen\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.pdb
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.exe
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.pdb
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.AddWord.resources
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Form1.resources
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.MainWindow.resources
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Properties.Resources.resources
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.UserDetail.resources
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.WordDetail.resources
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.csproj.GenerateResource.Cache
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\bin\Debug\EnglishStudy.exe
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\bin\Debug\EnglishStudy.pdb
+C:\Users\gateway\Desktop\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Register.resources
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.exe
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.pdb
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\bin\Debug\EnglishStudy.exe
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\bin\Debug\EnglishStudy.pdb
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.csprojResolveAssemblyReference.cache
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.AddWord.resources
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Form1.resources
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.MainWindow.resources
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Properties.Resources.resources
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Register.resources
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.UserDetail.resources
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.WordDetail.resources
+E:\bishe\2018\英语学习习词典\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.csproj.GenerateResource.Cache
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.AddWord.resources
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Form1.resources
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.MainWindow.resources
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Properties.Resources.resources
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Register.resources
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.UserDetail.resources
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.WordDetail.resources
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.csproj.GenerateResource.cache
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.csproj.CoreCompileInputs.cache
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\bin\Debug\EnglishStudy.exe
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\bin\Debug\EnglishStudy.pdb
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.exe
+C:\Users\ailei\Downloads\英语学习习词典-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.pdb
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\bin\Debug\EnglishStudy.exe
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\bin\Debug\EnglishStudy.pdb
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.AddWord.resources
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Form1.resources
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.MainWindow.resources
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Properties.Resources.resources
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.Register.resources
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.UserDetail.resources
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.WordDetail.resources
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.exe
+C:\Users\Administrator\Desktop\D20910英语单词速查系统的设计与实现-代码\EnglishStudy\EnglishStudy\obj\Debug\EnglishStudy.pdb

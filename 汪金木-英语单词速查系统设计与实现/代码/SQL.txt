@@ -1,0 +1,545 @@
+USE [EnglishStudy]
+GO
+/****** Object:  Table [dbo].[Storage]    Script Date: 2020/3/28 14:41:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Storage](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[UserID] [int] NULL,
+	[UserName] [nvarchar](50) NULL,
+	[WordID] [int] NULL,
+	[WordName] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Storage] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[User]    Script Date: 2020/3/28 14:41:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[User](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[UserName] [nvarchar](50) NULL,
+	[PassWord] [varchar](50) NULL,
+	[IdCard] [varchar](50) NULL,
+	[Birthday] [datetime] NULL,
+	[Sex] [varchar](50) NULL,
+	[RealName] [nvarchar](50) NULL,
+	[Email] [varchar](50) NULL,
+	[Telephone] [varchar](50) NULL,
+	[Remark] [nvarchar](500) NULL,
+	[UserType] [int] NULL,
+ CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Word]    Script Date: 2020/3/28 14:41:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Word](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Word] [varchar](500) NULL,
+	[Translate] [nvarchar](500) NULL,
+	[YinBiao] [varchar](50) NULL,
+	[Type] [nvarchar](50) NULL,
+	[fenzu] [nvarchar](50) NULL,
+	[zhongwenyuyin] [nvarchar](590) NULL,
+	[YingWenYuYan] [nvarchar](580) NULL,
+	[SuoXie] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Word] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Storage] ON 
+GO
+INSERT [dbo].[Storage] ([ID], [UserID], [UserName], [WordID], [WordName]) VALUES (2, 1, N'andy', 3, N'help')
+GO
+SET IDENTITY_INSERT [dbo].[Storage] OFF
+GO
+SET IDENTITY_INSERT [dbo].[User] ON 
+GO
+INSERT [dbo].[User] ([ID], [UserName], [PassWord], [IdCard], [Birthday], [Sex], [RealName], [Email], [Telephone], [Remark], [UserType]) VALUES (1, N'andy', N'123456', N'', CAST(N'2018-04-15T00:00:00.000' AS DateTime), N'男', N'andy', N'', N'', N'', 2)
+GO
+INSERT [dbo].[User] ([ID], [UserName], [PassWord], [IdCard], [Birthday], [Sex], [RealName], [Email], [Telephone], [Remark], [UserType]) VALUES (2, N'king', N'123456', N'', CAST(N'2020-03-28T00:00:00.000' AS DateTime), N'男', N'王者', N'', N'', N'', 2)
+GO
+SET IDENTITY_INSERT [dbo].[User] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Word] ON 
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (630, N'sat', N'坐（sit的过去式，过去分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (631, N'with', N'和……在一起；具有；用；反对；关于；包括；由于；随着；顺着；受雇于；虽然；支持；穿着；受……影响；表示与某物分离；由……负责', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (632, N'my', N'我的', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (633, N'friend', N'朋友；助手；赞助者', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (634, N'in', N'在……内；进……里；在……期间；在……以后；穿着；在……状态中；在……方面；包含在……中；从事……；用……语言，以……媒介；以……调；在（活动）过程中；在……岁数；当……时；（引出具某种品质的人的名字）；占……；在……之中（用于较大和较小数字之间）；以……的数量；带……颜色的；以……方式；具有……特性；按照（表示方式）', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (635, N'well', N'很好地；充分地；满意地；适当地', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (636, N'known', N'已知的；知名的；大家知道的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (637, N'coffee', N'咖啡；咖啡豆；咖啡色', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (638, N'shop', N'商店；店铺', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (639, N'neighboring', N'邻近的；附近的（等于neighbouring）', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (640, N'town', N'城镇，市镇；市内商业区', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (641, N'of', N'属于；……的；……的一部分；住在（某地）；关于；由……组成的；因为；（表示人或事的时空位置）在，当', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (642, N'venice', N'威尼斯（意大利港市）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (643, N'as', N'如同，像……一样', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (644, N'we', N'我们（主格）；笔者，本人（作者或演讲人使用）；朕，寡人', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (645, N'our', N'我们的', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (646, N'man', N'人；男人；人类；丈夫；雇工', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (647, N'called', N'被呼叫的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (648, N'the', N'这；那', NULL, N'art', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (649, N'waiter', N'服务员，侍者', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (650, N'and', N'和，与；就；而且；但是；然后', NULL, N'conj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (651, N'placed', N'放置（place的过去分词形式）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (652, N'his', N'他的', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (653, N'order', N'命令；顺序；规则；【贸易】订单', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (654, N'two', N'两个', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (655, N'cups', N'杯子（cup的复数形式）；拨火罐（器具）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (656, N'one', N'一；一个；一岁；一点钟', NULL, N'num', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (657, N'on', N'在……之上；向，朝；关于；在……时候；由……支撑；（身上）带着；一……就；吃，喝；接近；根据；挣……钱；以……支付；以……为燃料；在……中；作为……成员；借助（仪器或器械）；与……相比；增加；靠……服用药物；（由电台或电视）播放；忙碌于', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (658, N'wall', N'墙壁，围墙；似墙之物', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (659, N'got', N'得到，明白（get的过去式和过去分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (660, N'interested', N'感兴趣的；有权益的；有成见的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (661, N'observed', N'观察的；观测的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (662, N'that', N'那，那个；那种', NULL, N'det', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (663, N'he', N'他；（泛指的）人；上帝', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (664, N'served', N'服务（serve的过去分词）；服役；招待；发球', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (665, N'cup', N'杯子；奖杯；酒杯', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (666, N'but', N'但是；而是；然而', NULL, N'conj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (667, N'paid', N'支付；付清（pay的过去式和过去分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (668, N'for', N'（表示对象、用途等）给，对；为了；关于；代表；受雇于；意思是；支持；因为；为得到；换取；就……而言；……后（更好、更快乐等）；（表示去向）往；（安排或预定）在……时；对（某人）来说（困难、必需、愉快等）；以……为价格；（表示一段时间）计；表示一系列事件之一', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (669, N'soon', N'快；不久，一会儿；立刻；宁愿', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (670, N'left', N'左边的；左派的；剩下的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (671, N'attached', N'附加的；依恋的，充满爱心的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (672, N'piece', N'块；件；篇；硬币', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (673, N'paper', N'纸；论文；文件；报纸', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (674, N'to', N'朝；位于……；到某处；到某状态；差；给；对于；比；连着；对着；等于；向……表示敬意；伴随；为了给……；适合；按……的看法；（结算账目时）记入', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (675, N'saying', N'谚语，格言，警句；（尤指政治或宗教名人）格言集；言论，话', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (676, N'similar', N'相似的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (677, N'occasions', N'场合；机会（occasion的复数）；理由', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (678, N'took', N'拿；取；接受（take的过去式）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (679, N'place', N'地方；住所；座位', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (680, N'twice', N'两次；两倍', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (681, N'while', N'在……期间；在……的过程中；与……同时；（对比两件事物）……而；虽然，尽管；直到……为止', NULL, N'conj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (682, N'were', N'是，在（are的过去式）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (683, N'there', N'在那里；在那边；在那点上', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (684, N'it', N'[指无生命的东西、动物、植物]它；这；那', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (685, N'seemed', N'似乎（seem的过去式）；装作', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (686, N'this', N'这，这个；这样；今，本；……的这个；有个', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (687, N'gesture', N'姿态；手势', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (688, N'quite', N'很；相当；完全', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (689, N'normal', N'正常的；正规的；标准的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (690, N'at', N'在（表示存在或出现的地点、场所、位置、空间）；在……岁时；在……远；以（某种价格、速度等）；向，朝；处于……状态；处于最佳（或最差等）状态；达；因为；在……方面；响应；忙于；（武器）瞄准；用，以；（抓）住；从事于；冲(某人……)', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (691, N'however', N'无论如何；不管怎样（接副词或形容词）；然而；可是', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (692, N'something', N'某事；某物；想来重要（或值得注意）的事物；（数目）若干，大致，左右；有点像；真不错；(想法或建议)）有道理；诸如此类的东西', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (693, N'unique', N'独特的，稀罕的；[数]唯一的，独一无二的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (694, N'confusing', N'混乱的；混淆的；令人困惑的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (695, N'us', N'我们', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (696, N'after', N'在……之后；在……身后；反复；跟随；追求；以……命名', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (697, N'few', N'很少的；几乎没有的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (698, N'days', N'每天；在白天', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (699, N'when', N'什么时候；什么情况下；什么场合下；（用于时间的表达方式之后）在那时，其时；当时，当场', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (700, N'again', N'又，此外；再一次；再说；增加', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (701, N'entered', N'进入的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (702, N'way', N'方法；道路；方向；行业；习惯', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (703, N'dressed', N'穿好衣服的；穿着……衣服的；打扮好的；去内脏及分割加工好的（特指动物，如鱼，禽类等）', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (704, N'did', N'做（do的过去式）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (705, N'not', N'表示否定，不', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (706, N'match', N'火柴；比赛，竞赛；对手；相配的人（或物）；（计算机）匹配；配合；搭配；相似的东西；婚姻；配偶', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (707, N'standard', N'标准；水准；旗；度量衡标准', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (708, N'or', N'或，或者；还是；要不然', NULL, N'conj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (709, N'atmosphere', N'气氛；大气；空气', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (710, N'poverty', N'贫困；困难；缺少；低劣', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (711, N'evident', N'明显的；明白的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (712, N'from', N'从……起；从……开始；寄自，得自；来自；由……（制成）；（两地的距离）离；从；从……（到）；（使）免遭；由于；根据；与……（不同）；防；不在；从……来看；妨碍', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (713, N'looks', N'相貌', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (714, N'seated', N'就座的，坐下来的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (715, N'himself', N'他自己；他亲自，他本人', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (716, N'looked', N'看，瞧(look的过去式和过去分词)；注意；面向；寻找', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (717, N'said', N'上述的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (718, N'respect', N'尊敬，尊重；方面；敬意', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (719, N'dignity', N'尊严；高贵', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (720, N'had', N'有；吃；得到（动词have的过去式和过去分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (721, N'without', N'没有；不和……在一起；不带；在……外部', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (722, N'paying', N'支付；（某种做法）有好处（pay的现在分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (723, N'amazed', N'（使）大为惊奇，惊愕；（使）糊涂（amaze的过去式及过去分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (724, N'watch', N'观察；注视；看守；警戒', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (725, N'all', N'所有；全部；（与单数名词连用，表示某事在某段时间内持续发生）全部的；极度；唯一；任何', NULL, N'det', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (726, N'off', N'离开；脱掉；出发，起跑；结束，取消；（电）未连接；没有；下班；减价；在剧院舞台的后面', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (727, N'threw', N'抛（throw的过去式）；丢弃', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (728, N'dustbin', N'垃圾箱', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (729, N'now', N'现在；如今；立刻', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (730, N'no', N'不，完全不', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (731, N'surprise', N'惊奇，诧异；突然袭击', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (732, N'matter', N'物质；事件', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (733, N'very', N'非常，很；完全；（非正式）典型地；最', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (734, N'clear', N'清楚的；清澈的；晴朗的；无罪的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (735, N'great', N'伟大的，重大的；极好的，好的；主要的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (736, N'needy', N'贫困的；贫穷的；生活艰苦的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (737, N'shown', N'解释（show的过去分词）；给予；表露', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (738, N'by', N'由，被；通过；相差……；到……之前；在……旁边', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (739, N'people', N'人；人类；民族；公民', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (740, N'moved', N'移动，移动到；感动（move的过去式，过去分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (741, N'tears', N'眼泪；泪水（tear复数形式）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (742, N'is', N'是（be的三单形式）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (743, N'necessity', N'需要；必然性；必需品', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (744, N'point', N'要点；得分；标点；[机]尖端', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (745, N'take', N'拿，取；采取；接受（礼物等）；买，花费；耗费（时间等）', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (746, N'pleasure', N'快乐；希望；娱乐；令人高兴的事', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (747, N'any', N'任何的；任一；一点，些许；尽可能多的', NULL, N'det', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (748, N'blessing', N'祝福；赐福；祷告', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (749, N'maybe', N'也许；可能；大概', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (750, N'also', N'也；而且；同样', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (751, N'need', N'必须，需要；（表示应该或不得不做）有必要', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (752, N'think', N'想；认为；想起；想像；打算', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (753, N'about', N'大约；将近；到处；（特定位置）四下；闲着；周围；掉头', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (754, N'those', N'那些（that的复数）', NULL, N'det', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (755, N'who', N'谁；什么人', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (756, N'appreciate', N'欣赏；感激；领会；鉴别', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (757, N'specific', N'特殊的，特定的；明确的；详细的；[药]具有特效的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (758, N'cannot', N'不能；无法', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (759, N'afford', N'买得起；给予，提供', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (760, N'note', N'笔记；音符；票据；注解；纸币；便笺；照会；调子', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (761, N'gets', N'得到（get的第三人称单数）；抓住；说服；受到（惩罚等）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (762, N'communication', N'通讯，[通信]通信；交流；信函', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (763, N'going', N'离开，离去；（尤指赛马场的）地面状况；进展速度；难度；（受路况影响的）行进', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (764, N'between', N'（空间、时间、数量等）在……之间；往返于；（表关系）两……之间；合用；一起', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (765, N'affording', N'给予，提供；买得起', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (766, N'smile', N'微笑；微笑着表示；露出（某种笑容）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (767, N'face', N'脸；表面；面子；面容；外观；威信', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (768, N'having', N'有，拥有（have的现在分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (769, N'lower', N'下方的；在底部的；（数字或数量）较小的；下游的；下级的；下等的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (770, N'self', N'自己，自我；本质；私心', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (771, N'has', N'有，吃，得到，从事，允许，雇用，享有（have的第三人称单数）；（亲属关系中）接受；拿；买到', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (772, N'free', N'免费的；自由的，不受约束的；[化学]游离的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (773, N'asking', N'询问；请求；要求；要价；指望（从某人那里）得到；邀请（ask的现在分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (774, N'knowing', N'会意的；（尤指过分或过早地）世故的；明知的，故意的；认知的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (775, N'given', N'赠予的；沉溺的；规定的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (776, N'him', N'他（宾格）', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (777, N'only', N'只，仅仅；不料', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (778, N'an', N'一（在元音音素前）', NULL, N'art', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (779, N'besides', N'除……之外（还）', NULL, N'prep', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (780, N'remember', N'记得；牢记；纪念；代…问好', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (781, N'role', N'角色；任务', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (782, N'played', N'演奏；播放；玩耍；参加竞赛（play的过去分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (783, N'generosity', N'慷慨，大方；宽宏大量', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (784, N'care', N'关怀；照料；谨慎；忧虑', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (785, N'what', N'什么；多么；多少', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (786, N'made', N'……制造的，生产的；制作……的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (787, N'author', N'作者；作家；创始人', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (788, N'confused', N'困惑的；混乱的；糊涂的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (789, N'making', N'发展；制造；形成', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (790, N'gestures', N'手势，姿态（gesture的复数形式）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (791, N'customers', N'客户；[贸易]顾客（customer的复数）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (792, N'buying', N'买进', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (793, N'attaching', N'附属的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (794, N'orders', N'圣职(holyorders)', NULL, N'abbr', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (795, N'put', N'放；表达；移动；安置；赋予', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (796, N'thought', N'思想；思考；想法；关心', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (797, N'obviously', N'明显地', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (798, N'poor', N'贫穷的；可怜的；贫乏的；卑鄙的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (799, N'properly', N'适当地；正确地；恰当地', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (800, N'right', N'正确的；直接的；右方的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (801, N'leave', N'离开；留下；遗忘；委托', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (802, N'strange', N'奇怪的；陌生的；外行的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (803, N'opinion', N'意见；主张', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (804, N'necessary', N'必要的；必需的；必然的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (805, N'life', N'生活，生存；寿命', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (806, N'some', N'一些；某些；好些；少量；某个；算不上；大约；至少有一点', NULL, N'det', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (807, N'can', N'能；能够；有机会；可能；被允许', NULL, N'aux', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (808, N'everyone', N'每个人；人人', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (809, N'should', N'应该；就；可能；将要；本当；竟然', NULL, N'aux', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (810, N'have', N'有；让；拿；从事；允许', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (811, N'passage', N'一段（文章）；走廊；通路；通过；旅程，行程；船费', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (812, N'mainly', N'主要地，大体上', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (813, N'concerned', N'有关的；关心的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (814, N'learning', N'学习；学问', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (815, N'others', N'其他人', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (816, N'caring', N'关心他人的；乐于助人的；体贴的；护理的；有同情心的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (817, N'more', N'更多；此外；更大程度地', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (818, N'analyzing', N'分析，解析（analyze的现在分词）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (819, N'characters', N'特性；人物角色（character复数）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (820, N'most', N'最；非常，极其；最多；几乎', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (821, N'teenagers', N'青少年（13至19岁，teenager的复数）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (822, N'britain', N'英国；不列颠', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (823, N'receive', N'收到；接待；接纳', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (824, N'pocket', N'口袋；钱；容器', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (825, N'money', N'钱；货币；财富', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (826, N'their', N'他们的，她们的；它们的', NULL, N'pron', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (827, N'parents', N'父母；双亲（parent的复数）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (828, N'report', N'报告；报道；成绩单', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (829, N'bank', N'银行；岸；浅滩；储库', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (830, N'scotland', N'苏格兰', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (831, N'interviewed', N'面试；接见；会见（interview的过去式）', NULL, N'v', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (832, N'over', N'倒下；翻转；穿过；完全覆盖；以上；大于；再；结束；改变；完毕；仔细地', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (833, N'young', N'年轻的；初期的；没有经验的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (834, N'found', N'创立，建立；创办', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (835, N'get', N'使得；获得；受到；变成', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (836, N'different', N'不同的；个别的，与众不同的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (837, N'families', N'家庭（family的复数）；家族', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (838, N'give', N'给；产生；让步；举办；授予', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (839, N'amounts', N'数量，总额（amount的复数）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (840, N'average', N'平均；平均数；（海损的）平均分担；平均水平；（按保单规定应付赔偿额的）降减', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (841, N'eight', N'八；八个；第八；八岁；八点', NULL, N'num', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (842, N'fifteen', N'十五；十五个；十五人组成的橄榄球队', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (843, N'year', N'年；年度；历年；年纪；一年的期间；某年级的学生', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (844, N'olds', N'老者（old的复数形式）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (845, N'uk', N'联合王国（UnitedKingdom）', NULL, N'abbr', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (846, N'week', N'周，星期', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (847, N'children', N'孩子们（child的复数）', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (848, N'slightly', N'些微地，轻微地；纤细地，瘦小的', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (849, N'than', N'（用以引出比较的第二部分）比；（比较数量、距离等）多于；（表示一事紧跟另一事发生）就；除……（外）', NULL, N'conj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (850, N'national', N'国家的；国民的；民族的；国立的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (851, N'logically', N'逻辑上；合乎逻辑', NULL, N'adv', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (852, N'younger', N'更年轻的，年纪更小的；更未成熟的，更没经验的；更年轻人似的，更朝气的；小……（用于称呼与父母同名的年纪较小者）；平民地主产业的继承人的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (853, N'nineteen', N'十九', NULL, N'num', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (854, N'month', N'月，一个月的时间', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (855, N'many', N'许多', NULL, N'det', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (856, N'save', N'节省；保存；储蓄；解救', NULL, N'vt', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (857, N'least', N'最小的；最少的（little的最高级）', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (858, N'quarter', N'四分之一；地区；季度；一刻钟；两角五分；节', NULL, N'n', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (859, N'weekly', N'每周的；周刊的；一周一次的', NULL, N'adj', NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (860, N'bubby', N'芭比', N'buby', N'动词', N'动物', N'', N'', N'')
+GO
+INSERT [dbo].[Word] ([ID], [Word], [Translate], [YinBiao], [Type], [fenzu], [zhongwenyuyin], [YingWenYuYan], [SuoXie]) VALUES (861, N'International Technology', N'国际技术', N'', N'短语', N'短语', N'', N'', N'IT')
+GO
+SET IDENTITY_INSERT [dbo].[Word] OFF
+GO

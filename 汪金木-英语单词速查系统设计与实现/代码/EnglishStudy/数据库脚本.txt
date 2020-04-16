@@ -1,0 +1,68 @@
+USE [EnglishStudy]
+GO
+/****** 对象:  Table [dbo].[User]    脚本日期: 12/27/2011 00:18:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[User](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[UserName] [nvarchar](50) NULL,
+	[PassWord] [varchar](50) NULL,
+	[IdCard] [varchar](50) NULL,
+	[Birthday] [datetime] NULL,
+	[Sex] [varchar](50) NULL,
+	[RealName] [nvarchar](50) NULL,
+	[Email] [varchar](50) NULL,
+	[Telephone] [varchar](50) NULL,
+	[Remark] [nvarchar](500) NULL,
+	[UserType] [int] NULL,
+ CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Word]    脚本日期: 12/27/2011 00:18:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Word](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Word] [varchar](50) NULL,
+	[Translate] [nvarchar](500) NULL,
+	[YinBiao] [varchar](50) NULL,
+	[Type] [nvarchar](50) NULL,
+	[fenzu] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Word] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Storage]    脚本日期: 12/27/2011 00:18:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Storage](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[UserID] [int] NULL,
+	[UserName] [nvarchar](50) NULL,
+	[WordID] [int] NULL,
+	[WordName] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Storage] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+) ON [PRIMARY]
+) ON [PRIMARY]
+GO
