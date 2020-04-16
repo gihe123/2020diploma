@@ -1,15 +1,16 @@
-�������
-��ϵͳ���ܸ���ʱ������ǰ�أ�������ҵ��ר���ķ�����еġ�
+技术简介
+该系统紧密跟随时代技术前沿，打造术业有专攻的方向进行的。
 
-1����ǰ̨����ʹ�õ���jquery��css��h5��ajax��canvas�Լ���ʽ�����Ĳ���������ֲ�ͼ�Լ�ͼ����еȵȣ�������Ƶ��ʾ�Լ�ͼ����ģ�飬���õ���ajaxǶ��ʹ�á����ļ��������Լ�ͼ��ʵʱ����ʾ��
+1）在前台方面使用到了jquery，css，h5，ajax，canvas以及各式各样的插件（包括轮播图以及图像剪切等等），在视频显示以及图像传输模块，运用到了ajax嵌套使用、及文件流传递以及图像实时性显示。
 
-2���ں�̨�����õ���springboot��mybatis��springsecurity��springsession��face++�ȵȼ�����ȫ������Ŀǰ��̨��������Ŀ�ܣ�������Ŀ�������ɵĽ��С�
+2）在后台方面用到了springboot、mybatis、springsecurity、springsession和face++等等技术，全面引入目前后台中最优秀的框架，保障项目有条不紊的进行。
 
-3�������ݿⷽ���õ���mysql��mongodb��redis�����������ݿ⣬ǿ�����ļ�����Ϣ����洢�������ˡ�ʲô���Ķ���������Ӧ�÷���ʲô���ĵط���ʹ�ö����ܹ����Ĵ�ȡ����
+3）在数据库方面用到了mysql、mongodb和redis三大主流数据库，强化了文件于信息分类存储，做到了“什么样的东西，他就应该放在什么样的地方，使得东西能够最快的存取”。
 
-4�������緽���õ���nginx��ngrok��ʹ����Ŀ���п��١���Ч��Ҳ�ܹ��ò���С����Կ��ٵ��������������ݡ�
+4）在网络方面用到了nginx和ngrok，使得项目运行快速、高效，也能够让测试小组可以快速的在外网测试数据。
 
-���ʹ��
-1������������ʹ�ã���ȷ���������������redis��mysql�������ݿ⣬���ȴӲֿ�Ѹ���Ŀ��¡�����������IDEA������������ʹ��IDEA����ģ���Ȼ��Ҳ����ʹ��vscode�ȵȹ��ߵ��룩���������Ŀ������gradle 3.5.1�����idea�У�Ȼ������mysql��redis�������ݿ⣬mysql�������8.0���ϰ汾����������Ŀ������start.java�������������http://localhost:11122/dept��
+如何使用
+1）如果你想快速使用，请确保你电脑上至少有redis和mysql两个数据库，首先从仓库把该项目克隆下来，最好有IDEA编译器（我是使用IDEA编译的，当然你也可以使用vscode等等工具导入），导入该项目。下载gradle 3.5.1部署进idea中，然后启动mysql和redis两个数据库，mysql最好下载8.0以上版本，启动该项目主函数start.java，最后浏览器浏览http://localhost:11122/dept。
 
-2���������ʹ�ø���Ŀ��ȫ�����ܣ��������沽���½�������mongodb���ݿ⣬Ȼ������mongodb-file-server�������ȫ�����ܡ���Ȼ����Բ���nginx��������Ŀ�ļ���������
+2）如果你想使用该项目的全部功能，请在上面步骤下接着启动mongodb数据库，然后启动mongodb-file-server即可浏览全部功能。当然你可以部署nginx，体验项目的极致流畅感
+PS:本系统的bug有创建第二个新项目添加不了文件，需要同时创建版本id
